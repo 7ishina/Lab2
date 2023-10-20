@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<INPUT type="button" class = "buttonstyle" value="Window" OnClick="alert(window.status);">
+<INPUT type="button" class = "buttonstyle"value="Navigator" OnClick="alert(navigator.appVersion);">
+<INPUT type="button" class = "buttonstyle" value="Location" OnClick="alert(location.href	);">
+<INPUT type="button" class = "buttonstyle" value="Screen" OnClick="alert('Размер экрана: ' + screen.width + ' x ' + screen.height);">
+
+
+<style>
+  .image {
+    position: absolute;
+    margin: 100px 0px 0px  300px;
+    width: 30%;
+    height: 30%;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMW</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script type="text/javascript">alert(document.lastModified)
+function changeStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "6cm";
+      p.style.textIndent = "2.5cm";
+    }
+
+    function restoreStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "1.5cm";
+      p.style.textIndent = "2cm";
+    }
+function hideMiddleImage() {
+  var middleImage = document.getElementsByName("image2")[0];
+  middleImage.style.display = "none";
+}
+
+function showMiddleImage() {
+  var middleImage = document.getElementsByName("image2")[0];
+  middleImage.style.display = "block";
+}
+
+function swapLayers() {
+  var topImage = document.getElementsByName("image1")[0];
+  var bottomImage = document.getElementsByName("image3")[0];
+  
+  var tempZIndex = topImage.style.zIndex;
+  topImage.style.zIndex = bottomImage.style.zIndex;
+  bottomImage.style.zIndex = tempZIndex;
+}
+
+// Функция для переключения стиля при наведении и отведении мыши
+    function toggleCellStyle(cell) {
+      if (cell.classList.contains("table-cell")) {
+        cell.className = "table-cell-alternate";
+      } else {
+        cell.className = "table-cell";
+      }
+  }
+
+
+</script>
+</head>
+
+<body>
+&nbsp;<div class="text">
+    <main>
+     <h1>Создание BMW</h1>
+         <font onmouseover="this.style.color='Gray';this.style.fontFamily='Verdana'" onmouseout="this.style.color='black'; this.style.fontFamily='Times New Roman'; this.style.fontSize='13pt'"><p>История компании BMW — это череда стремительных взлетов и обидных падений, за каждым из которых следовал новый взлет. Сейчас это гигантский концерн со штаб-квартирой в Мюнхене, пятью заводами в Германии и множеством дочерних предприятий по всему миру"</font> <br> </p>
+ 
+	        <p id="second" onmouseover="changeStyle()" onmouseout="restoreStyle()">Аббревиатура BMW расшифровывается просто: это начальные буквы словосочетания Bayerische Motoren Werke, в переводе с немецкого — «Баварские моторные заводы». Однако на протяжении своего существования фирма меняла название.
+
+После окончания Первой мировой войны для BMW настали трудные времена. По Версальскому договору, который подвел итоги глобального конфликта, Германии было запрещено выпускать авиационные моторы.
+<br> </p>
+
+	<p>Как появился логотип компании» <br> </p>
+
+	<p>Во времена становления БМВ логотип не имел для компании такого значения, как сейчас. У предприятия Карла Раппа эмблема представляла собой круг с силуэтом шахматного коня в центре, по окружности были вписаны слова «Rapp Motor».<br> </p>
+
+	<p>омпания БМВ, будучи наследницей Rapp Motorenwerke, использовала похожий логотип, но слегка изменила рисунок, заменив надпись на свою аббревиатуру. Шахматные мотивы, символизирующие стратегический успех, сохранились. Только теперь фигуры в круге не было, вместо этого его разделили на четыре клетки, окрасив их в цвета баварского флага. Правда, цвета расположены в обратном порядке — закон того времени запрещал использовать на коммерческих эмблемах символику государственной власти.
+
+Напоминание об авиамоторной компании Раппа, прародительницы БМВ, на долгое время запечатлелось в логотипе бренда.
+</p>
+  
+        </details>&nbsp;<h2>Культовые модели компании</h2>
+          <p class="news"><span class="date">1 место -  </span>BMW 328.</p>
+          <p class="news"><span class="date">2 плюс -  </span>BMW M1</p>
+          <p class="news"><span class="date">3 плюс -  </span>BMW 850i</p>
+          <p class="news"><span class="date">4 плюс -  </span>BMW 3200CS</p>
+          <p class="news"><span class="date">5 плюс - </span>BMW 1500</p>
+          
+	<table>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW 3</td>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW 4</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW 5</td>
+        </tr>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW X5</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW X6</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">BMW X7</td>
+        </tr>
+      </table>
+     
+<button class = "buttonstyle" onclick="hideMiddleImage()">Скрыть изображение</button>
+<button class = "buttonstyle" onclick="showMiddleImage()">Показать изображение</button>
+<button class = "buttonstyle" onclick="swapLayers()">Поменять изображение</button>
+
+<img src="image1.jpg" class="image" style="z-index: 3;"img.style.paddingLeft="1.5cm"; name="image1" >
+<img src="image2.jpg" class="image" style="z-index: 2;"img.style.paddingLeft="1.5cm"; name="image2">
+<img src="image3.jpg" class="image" style="z-index: 1;"img.style.paddingLeft="1.5cm"; name="image3">
+
+</main>
+</div> 
+</body>
+</html>
